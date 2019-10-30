@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container" id="app">
+        <div>
+
+            <!-- <input type="text" v-model="message"> -->
+            <input type="checkbox" v-model="success">
+
+        </div>
+        <!-- <a :href="link" :title="message">{{ message }}</a> -->
+
+        <div class="alert alert-success" v-if="success">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" @click="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p>{{ message }}</p>
+        </div>
+
+        <ul>
+            <li v-for="person in persons">{{ person }}</li>
+
+            <button @click="addPersonn">Ajouter une personne</button>
+        </ul>
+
+    </div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.common.dev.js"></script>
+<script src="js/app.js"></script>
+
+</html>
